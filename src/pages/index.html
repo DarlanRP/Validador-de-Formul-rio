@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="/src/styles/style.css">
+</head>
+<body>
+    <header>
+        <a  class="logo" href="#" class="logo">AAA</a>
+        <nav>
+            <ul>
+                <a class="logo" href="#"><li>Home</li></a>
+                <a class="logo" href="#"><li>About</li></a>
+                <a class="logo" href="#"><li>Contact</li></a>
+            </ul>
+        </nav>
+        <div class="openForm" onclick="openMenu()">≣</div>
+    </header>
+    <div class="container">
+
+        <section>
+            <img src="/src/images/financial_data.png" alt="">
+        </section>
+        <aside>
+            <div class="menu-area">
+                <div class="closeForm" onclick="closeMenu()">X</div>
+                <div class="formC">
+                    <h1>Crie uma conta</h1>
+                    <form class="validatorForm" action="cadastro.php" method="POST">
+                        <label>
+                            Nome<span>*</span>:<br/>
+                            <input type="text" name='name' data-ruler="required|min=3">
+                        </label>
+                        <label>
+                            E-mail<span>*</span>:<br/>
+                            <input type="text" name='email' data-ruler="required|email">
+                        </label>
+                        <label>
+                            Idade:<br/>
+                            <input type="number" name='email'>
+                        </label>
+                        <label>
+                            Senha<span>*</span>:<br/>
+                            <input type="password" name="password" data-ruler="required|min=6">
+                        </label>
+                        <label>
+                            <input type="submit" value="Criar conta">
+                        </label>
+                    </form>
+                    <div>
+                        Já tem uma conta ?<a href="#">Faça login</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <script src="/src/js/script.js"></script>
+</body>
+</html>
